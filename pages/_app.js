@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import "@/css/app.css";
+import "@/css/bootstrap.min.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import { SSRProvider } from "react-bootstrap";
 
-export default MyApp
+const myApp = ({ Component, pageProps }) => {
+	return (
+		<SSRProvider>
+			<Component {...pageProps} />
+			<ToastContainer />
+		</SSRProvider>
+	);
+};
+
+export default myApp;
