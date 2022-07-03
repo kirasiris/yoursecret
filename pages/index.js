@@ -52,18 +52,17 @@ const Index = ({
 	return (
 		<Layout title="Home">
 			<SecretForm objects={secrets} setObjects={setSecrets} />
-			<Row>
-				<Content fullWidth>
-					{secrets?.length > 0 ? (
-						<div className="card-columns">
-							{secrets.map((secret, index) => (
-								<SingleSecret key={secret._id} secret={secret} />
-							))}
-						</div>
-					) : (
-						<NothingFoundAlert />
-					)}
-				</Content>
+			<Row
+				data-masonry={{ percentPosition: true }}
+				style={{ position: "unset" }}
+			>
+				{secrets?.length > 0 ? (
+					secrets.map((secret, index) => (
+						<SingleSecret key={secret._id} secret={secret} />
+					))
+				) : (
+					<NothingFoundAlert />
+				)}
 			</Row>
 		</Layout>
 	);

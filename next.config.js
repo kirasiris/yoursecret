@@ -7,6 +7,12 @@ module.exports = {
 		PRODUCTION: false,
 	},
 	images: {
-		domains: ["gravatar.com", "kevinurielfonseca.me"],
+		domains: [
+			"gravatar.com",
+			"s3-us-west-1.amazonaws.com",
+			"befreebucket-for-outputs.s3.amazonaws.com",
+			"kevinurielfonseca.me",
+			"i0.wp.com",
+		],
 	},
 };

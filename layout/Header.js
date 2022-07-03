@@ -35,6 +35,16 @@ const Header = ({ router }) => {
 				<div className="collapse navbar-collapse" id="navbarsExample02">
 					<ul className="navbar-nav mr-auto">
 						<li className="nav-item">
+							<Link href="/about" passHref>
+								<a
+									className="nav-link text-white"
+									style={isActive(router, `/about`)}
+								>
+									About
+								</a>
+							</Link>
+						</li>
+						<li className="nav-item">
 							<Link href="/male" passHref>
 								<a
 									className="nav-link text-white"

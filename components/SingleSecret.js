@@ -26,12 +26,14 @@ const SingleSecret = ({ secret }) => {
 		not_safe_for_work = <i className="fas fa-user-secret" />;
 	}
 	return (
-		<article>
+		<div className="col-md-8 col-sm-6 col-lg-4 col-sm-2 mb-4">
 			<Card className={classes}>
 				<Card.Header>
 					<span className="badge age badge-light">{not_safe_for_work}</span>
 
-					<span className="badge sex badge-secondary">{sexo}</span>
+					<span className="badge sex badge-secondary">
+						{sexo} - {secret.age}
+					</span>
 					<br />
 				</Card.Header>
 				<Card.Body>
@@ -46,7 +48,7 @@ const SingleSecret = ({ secret }) => {
 					</figure>
 				</Card.Body>
 			</Card>
-		</article>
+		</div>
 	);
 };
 
